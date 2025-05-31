@@ -1,12 +1,26 @@
-# GoLogo
+<!--  README badges  -->
+<a href="#"><img src="https://img.shields.io/github/v/release/julian-bruyers/gologo?label=Latest&labelColor=2D3748&color=003087"></a>
+<a href="#"><img src="https://img.shields.io/github/license/julian-bruyers/gologo?&label=License&logo=opensourceinitiative&logoColor=ffffff&labelColor=2D3748&color=2D3748"></a>
+<a href="https://plugins.jetbrains.com/plugin/27510-gologo"><img src="https://img.shields.io/badge/Linux-E95420?logo=linux&logoColor=white" align="right"></a>
+<a href="https://plugins.jetbrains.com/plugin/27510-gologo"><img src="https://custom-icon-badges.demolab.com/badge/Windows-0078D6?logo=windows11&logoColor=white" align="right"></a>
+<a href="https://plugins.jetbrains.com/plugin/27510-gologo"><img src="https://img.shields.io/badge/macOS-333333?logo=apple&logoColor=F0F0F0" align="right"></a>
+
+
 
 ![GoLogo Plugin](/docs/assets/gologo_header.png)
+
 
 ## About GoLogo
 
 GoLogo is a plugin for the JetBrains IDE [GoLand](https://www.jetbrains.com/de-de/go/). This plugin replaces the
 beloved GoLang gopher icon in the file explorer and editor tabs (which is the default with the JetBrains
 [Go plugin](https://plugins.jetbrains.com/plugin/9568-go)) with the official GoLang logo icon.
+
+<p align="center">
+  <a href="https://plugins.jetbrains.com/plugin/27510-gologo">
+    <img src="https://img.shields.io/badge/JetBrains%20Marketplace-Install%20GoLogo-blue?style=for-the-badge&logo=jetbrains" alt="Install GoLogo from JetBrains Marketplace">
+  </a>
+</p>
 
 ## How to build
 
