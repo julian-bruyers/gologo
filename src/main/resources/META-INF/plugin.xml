@@ -22,17 +22,7 @@
         <postStartupActivity implementation="com.julianbruyers.gologo.GoActionDiscoveryOverride"/>
         <!-- Application service for dynamic action icon override -->
         <applicationService serviceImplementation="com.julianbruyers.gologo.GoActionIconListener"/>
-    </extensions>
-
-    <actions>
-        <!-- Custom Go actions with Go logo icons -->
-        <action id="GoLogo.NewGoFile"
-                class="com.julianbruyers.gologo.GoNewFileAction"
-                text="Go File"
-                description="Create a new Go file">
-            <add-to-group group-id="NewGroup" anchor="after" relative-to-action="NewFile"/>
-        </action>
-        
+    </extensions>    <actions>
         <action id="GoLogo.RefreshIcons" 
                 class="com.julianbruyers.gologo.RefreshIconsAction"
                 text="Refresh Go Icons"
