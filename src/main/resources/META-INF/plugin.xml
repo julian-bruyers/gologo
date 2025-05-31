@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idea-plugin>
+    <id>com.julianbruyers.gologo</id>
+    <name>GoLogo</name>
+    <version>1.0.0</version>
+    <vendor>Julian Bruyers</vendor>
+    <icon>/META-INF/pluginIcon.svg</icon>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.go</depends>    <extensions defaultExtensionNs="com.intellij">
+        <fileIconProvider implementation="com.julianbruyers.gologo.GoLogo" order="first"/>
+    </extensions>
+</idea-plugin>
