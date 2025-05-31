@@ -50,29 +50,22 @@ public class GoActionDiscoveryOverride implements StartupActivity, DumbAware {
         ApplicationManager.getApplication().invokeLater(() -> {
             discoverAndOverrideGoActions();
         });
-    }
-
-    private void discoverAndOverrideGoActions() {
+    }    private void discoverAndOverrideGoActions() {
         ActionManager actionManager = ActionManager.getInstance();
         
-        System.out.println("GoLogo: Starting comprehensive Go action discovery...");
+        overrideActionsByIds(actionManager, GO_NEW_FILE_IDS, GO_NEW_FILE_ICON);
+        overrideActionsByIds(actionManager, GO_NEW_WORKSPACE_IDS, GO_NEW_WORKSPACE_FILE_ICON);
+        overrideActionsByIds(actionManager, GO_TOOLS_IDS, GO_TOOLS_ICON);
+        overrideActionsByIds(actionManager, GO_SETTINGS_IDS, GO_SETTINGS_ICON);
         
-        // Override known action IDs
-        overrideActionsByIds(actionManager, GO_NEW_FILE_IDS, GO_NEW_FILE_ICON, "New Go File");
-        overrideActionsByIds(actionManager, GO_NEW_WORKSPACE_IDS, GO_NEW_WORKSPACE_FILE_ICON, "New Workspace File");
-        overrideActionsByIds(actionManager, GO_TOOLS_IDS, GO_TOOLS_ICON, "Go Tools");
-        overrideActionsByIds(actionManager, GO_SETTINGS_IDS, GO_SETTINGS_ICON, "Go Settings");
-        
-        // Additional discovery by scanning all registered actions
         discoverGoActionsByPattern(actionManager);
     }
 
-    private void overrideActionsByIds(ActionManager actionManager, List<String> actionIds, Icon icon, String description) {
+    private void overrideActionsByIds(ActionManager actionManager, List<String> actionIds, Icon icon) {
         for (String actionId : actionIds) {
             AnAction action = actionManager.getAction(actionId);
             if (action != null) {
                 action.getTemplatePresentation().setIcon(icon);
-                System.out.println("GoLogo: Successfully overrode " + description + " icon for action: " + actionId);
             }
         }
     }
@@ -84,11 +77,9 @@ public class GoActionDiscoveryOverride implements StartupActivity, DumbAware {
             if (isGoRelatedAction(actionId)) {
                 AnAction action = actionManager.getAction(actionId);
                 if (action != null) {
-                    // Try to determine appropriate icon based on action name/class
                     Icon appropriateIcon = determineIconForAction(actionId, action);
                     if (appropriateIcon != null) {
                         action.getTemplatePresentation().setIcon(appropriateIcon);
-                        System.out.println("GoLogo: Discovered and overrode icon for Go action: " + actionId);
                     }
                 }
             }
@@ -100,16 +91,14 @@ public class GoActionDiscoveryOverride implements StartupActivity, DumbAware {
         return (lowerId.contains("go") && 
                 (lowerId.contains("new") || lowerId.contains("file") || 
                  lowerId.contains("workspace") || lowerId.contains("tools") || 
-                 lowerId.contains("settings"))) ||
-               actionId.startsWith("com.goide") ||
+                 lowerId.contains("settings"))) ||               actionId.startsWith("com.goide") ||
                actionId.startsWith("GoLang");
     }
-
+    
     private Icon determineIconForAction(String actionId, AnAction action) {
         String lowerId = actionId.toLowerCase();
-        String className = action.getClass().getName().toLowerCase();
         
-        if (lowerId.contains("newgofile") || lowerId.contains("new") && lowerId.contains("file")) {
+        if (lowerId.contains("newgofile") || (lowerId.contains("new") && lowerId.contains("file"))) {
             return GO_NEW_FILE_ICON;
         } else if (lowerId.contains("workspace")) {
             return GO_NEW_WORKSPACE_FILE_ICON;

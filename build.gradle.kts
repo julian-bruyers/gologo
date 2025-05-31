@@ -95,4 +95,9 @@ tasks {
     buildSearchableOptions {
         enabled = false
     }
+    
+    // Skip prepareJarSearchableOptions task to avoid directory issues
+    prepareJarSearchableOptions {
+        enabled = false
+    }
 }
