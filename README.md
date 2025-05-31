@@ -6,7 +6,6 @@
 <a href="https://plugins.jetbrains.com/plugin/27510-gologo"><img src="https://img.shields.io/badge/macOS-333333?logo=apple&logoColor=F0F0F0" align="right"></a>
 
 
-
 ![GoLogo Plugin](/docs/assets/gologo_header.png)
 
 
@@ -16,11 +15,14 @@ GoLogo is a plugin for the JetBrains IDE [GoLand](https://www.jetbrains.com/de-d
 beloved GoLang gopher icon in the file explorer and editor tabs (which is the default with the JetBrains
 [Go plugin](https://plugins.jetbrains.com/plugin/9568-go)) with the official GoLang logo icon.
 
+![GoLogo Description](/docs/assets/gologo_description.png)
+
 <p align="center">
   <a href="https://plugins.jetbrains.com/plugin/27510-gologo">
     <img src="https://img.shields.io/badge/JetBrains%20Marketplace-Install%20GoLogo-blue?style=for-the-badge&logo=jetbrains" alt="Install GoLogo from JetBrains Marketplace">
   </a>
 </p>
+
 
 ## How to build
 
