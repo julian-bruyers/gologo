@@ -7,22 +7,13 @@
     <icon>/META-INF/pluginIcon.svg</icon>
 
     <depends>com.intellij.modules.platform</depends>
-    <depends>org.jetbrains.plugins.go</depends>
-
-    <extensions defaultExtensionNs="com.intellij">
-        <!-- File icon provider with highest priority -->
+    <depends>org.jetbrains.plugins.go</depends>    <extensions defaultExtensionNs="com.intellij">
         <fileIconProvider implementation="com.julianbruyers.gologo.GoLogo" order="first"/>
-        <!-- PSI icon provider with highest priority -->
         <iconProvider implementation="com.julianbruyers.gologo.GoIconProvider" order="first"/>
-        <!-- Icon layer provider for additional customization -->
-        <iconLayerProvider implementation="com.julianbruyers.gologo.GoIconLayerProvider" order="first"/>
-        <!-- Startup activity to override action icons -->
         <postStartupActivity implementation="com.julianbruyers.gologo.GoActionIconOverride"/>
-        <!-- Enhanced action discovery and override -->
         <postStartupActivity implementation="com.julianbruyers.gologo.GoActionDiscoveryOverride"/>
-        <!-- Application service for dynamic action icon override -->
         <applicationService serviceImplementation="com.julianbruyers.gologo.GoActionIconListener"/>
-    </extensions>    
+    </extensions>
     <actions>
         <action id="GoLogo.RefreshIcons" 
                 class="com.julianbruyers.gologo.RefreshIconsAction"

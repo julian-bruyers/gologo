@@ -18,20 +18,13 @@ public class RefreshIconsAction extends AnAction {    @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
         Project project = e.getProject();
         if (project == null) return;
-
+        
         ApplicationManager.getApplication().invokeLater(() -> {
-            // Clear icon cache
             IconLoader.clearCache();
-            
-            // Refresh virtual file system
             VirtualFileManager.getInstance().asyncRefresh(null);
             
-            // Refresh project view and editor tabs
             AppUIUtil.invokeOnEdt(() -> {
-                // Refresh file editor manager to update tab icons
                 FileEditorManager.getInstance(project).getSelectedFiles();
-                
-                // Force repaint of the project view
                 project.getService(com.intellij.ide.projectView.ProjectView.class).refresh();
             });
         });

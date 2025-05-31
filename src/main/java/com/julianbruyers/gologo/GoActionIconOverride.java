@@ -44,19 +44,14 @@ public class GoActionIconOverride implements StartupActivity, DumbAware {
         overrideActionIcon(actionManager, "NewWorkspaceFile", GO_NEW_WORKSPACE_FILE_ICON);
         overrideActionIcon(actionManager, "GoTools", GO_TOOLS_ICON);
         overrideActionIcon(actionManager, "GoSettings", GO_SETTINGS_ICON);
-    }
-
-    private void overrideActionIcon(ActionManager actionManager, String actionId, Icon newIcon) {
+    }    private void overrideActionIcon(ActionManager actionManager, String actionId, Icon newIcon) {
         try {
             AnAction action = actionManager.getAction(actionId);
             if (action != null) {
                 action.getTemplatePresentation().setIcon(newIcon);
-                System.out.println("GoLogo: Successfully overrode icon for action: " + actionId);
-            } else {
-                System.out.println("GoLogo: Action not found: " + actionId);
             }
         } catch (Exception e) {
-            System.err.println("GoLogo: Error overriding icon for action " + actionId + ": " + e.getMessage());
+            // Ignore exceptions during icon override
         }
     }
 }
