@@ -2,27 +2,15 @@
 <idea-plugin require-restart="true">
     <id>com.julianbruyers.gologo</id>
     <name>GoLogo</name>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <vendor>Julian Bruyers</vendor>
-    <icon>/META-INF/pluginIcon.svg</icon>
-
-    <depends>com.intellij.modules.platform</depends>
-    <depends>org.jetbrains.plugins.go</depends>
-    
-    <extensions defaultExtensionNs="com.intellij">
-        <fileIconProvider implementation="com.julianbruyers.gologo.GoLogo" order="first"/>
-        <iconProvider implementation="com.julianbruyers.gologo.GoIconProvider" order="first"/>
-        <postStartupActivity implementation="com.julianbruyers.gologo.GoActionIconOverride"/>
-        <postStartupActivity implementation="com.julianbruyers.gologo.GoActionDiscoveryOverride"/>
-        <applicationService serviceImplementation="com.julianbruyers.gologo.GoActionIconListener"/>
+    <icon>/META-INF/pluginIcon.svg</icon>    <depends>com.intellij.modules.platform</depends>
+    <depends optional="true" config-file="go-support.xml">org.jetbrains.plugins.go</depends>
+      <extensions defaultExtensionNs="com.intellij">
+        <!-- Go-specific extensions are loaded from go-support.xml when Go plugin is available -->
     </extensions>
     
     <actions>
-        <action id="GoLogo.RefreshIcons" 
-                class="com.julianbruyers.gologo.RefreshIconsAction"
-                text="Refresh Go Icons"
-                description="Refresh Go Logo icons">
-            <add-to-group group-id="ToolsMenu" anchor="last"/>
-        </action>
+        <!-- Go-specific actions are loaded from go-support.xml when Go plugin is available -->
     </actions>
 </idea-plugin>

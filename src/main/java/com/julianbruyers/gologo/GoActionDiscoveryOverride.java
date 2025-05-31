@@ -68,10 +68,8 @@ public class GoActionDiscoveryOverride implements StartupActivity, DumbAware {
                 action.getTemplatePresentation().setIcon(icon);
             }
         }
-    }
-
-    private void discoverGoActionsByPattern(ActionManager actionManager) {
-        String[] allActionIds = actionManager.getActionIds("");
+    }    private void discoverGoActionsByPattern(ActionManager actionManager) {
+        List<String> allActionIds = actionManager.getActionIdList("");
         
         for (String actionId : allActionIds) {
             if (isGoRelatedAction(actionId)) {

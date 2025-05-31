@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idea-plugin>
+    <!-- This configuration is only loaded when the Go plugin is available -->
+    
+    <extensions defaultExtensionNs="com.intellij">
+        <fileIconProvider implementation="com.julianbruyers.gologo.GoLogo" order="first"/>
+        <iconProvider implementation="com.julianbruyers.gologo.GoIconProvider" order="first"/>
+        <postStartupActivity implementation="com.julianbruyers.gologo.GoActionIconOverride"/>
+        <postStartupActivity implementation="com.julianbruyers.gologo.GoActionDiscoveryOverride"/>
+        <applicationService serviceImplementation="com.julianbruyers.gologo.GoActionIconListener"/>
+    </extensions>
+    
+    <actions>
+        <action id="GoLogo.RefreshIcons" 
+                class="com.julianbruyers.gologo.RefreshIconsAction"
+                text="Refresh Go Icons"
+                description="Refresh Go Logo icons">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
