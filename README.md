@@ -54,6 +54,7 @@ macOS
 ```bash
 cd gologo
 sudo chmod +x gradlew
+./gradlew build
 ./gradlew buildPlugin
 ```
 
@@ -61,6 +62,7 @@ Windows
 
 ```cmd
 cd gologo
+.\gradlew.bat build
 .\gradlew.bat buildPlugin
 ```
 
@@ -69,6 +71,7 @@ Linux
 ```bash
 cd gologo
 sudo chmod +x gradlew
+./gradlew build
 ./gradlew buildPlugin
 ```
 
