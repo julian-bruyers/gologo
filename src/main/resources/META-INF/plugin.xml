@@ -22,7 +22,8 @@
         <postStartupActivity implementation="com.julianbruyers.gologo.GoActionDiscoveryOverride"/>
         <!-- Application service for dynamic action icon override -->
         <applicationService serviceImplementation="com.julianbruyers.gologo.GoActionIconListener"/>
-    </extensions>    <actions>
+    </extensions>    
+    <actions>
         <action id="GoLogo.RefreshIcons" 
                 class="com.julianbruyers.gologo.RefreshIconsAction"
                 text="Refresh Go Icons"
