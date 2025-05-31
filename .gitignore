@@ -1,0 +1,24 @@
+# Gradle files
+.gradle/
+build/
+
+# IntelliJ IDEA files
+.intellijPlatform/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VisualStudio Code files
+.vs/
+
+# Build artifacts
+*.jar
+*.zip
+
+# Log files
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
