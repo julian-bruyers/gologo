@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<idea-plugin>
+<idea-plugin require-restart="true">
     <id>com.julianbruyers.gologo</id>
     <name>GoLogo</name>
     <version>1.0.0</version>
@@ -7,13 +7,16 @@
     <icon>/META-INF/pluginIcon.svg</icon>
 
     <depends>com.intellij.modules.platform</depends>
-    <depends>org.jetbrains.plugins.go</depends>    <extensions defaultExtensionNs="com.intellij">
+    <depends>org.jetbrains.plugins.go</depends>
+    
+    <extensions defaultExtensionNs="com.intellij">
         <fileIconProvider implementation="com.julianbruyers.gologo.GoLogo" order="first"/>
         <iconProvider implementation="com.julianbruyers.gologo.GoIconProvider" order="first"/>
         <postStartupActivity implementation="com.julianbruyers.gologo.GoActionIconOverride"/>
         <postStartupActivity implementation="com.julianbruyers.gologo.GoActionDiscoveryOverride"/>
         <applicationService serviceImplementation="com.julianbruyers.gologo.GoActionIconListener"/>
     </extensions>
+    
     <actions>
         <action id="GoLogo.RefreshIcons" 
                 class="com.julianbruyers.gologo.RefreshIconsAction"
