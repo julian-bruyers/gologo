@@ -5,8 +5,8 @@
 ## About GoLogo
 
 GoLogo is a plugin for the JetBrains IDE [GoLand](https://www.jetbrains.com/de-de/go/). This plugin replaces the
-beloved GoLang gopher icon in the file explorer and editor which is the standard with the JetBrains
-[Go plugin](https://plugins.jetbrains.com/plugin/9568-go) to the GoLang icon.
+beloved GoLang gopher icon in the file explorer and editor tabs (which is the default with the JetBrains
+[Go plugin](https://plugins.jetbrains.com/plugin/9568-go)) with the official GoLang logo icon.
 
 ## How to build
 
@@ -16,7 +16,7 @@ beloved GoLang gopher icon in the file explorer and editor which is the standard
 git clone https://github.com/Julian-Bruyers/gologo
 ```
 
-### 2. Make sure to have [Gradle](https://gradle.org) and min. [Java JDK v17](https://www.oracle.com/de/java/technologies/downloads/) installed
+### 2. Make sure you have [Gradle](https://gradle.org) and at least [Java JDK v17](https://www.oracle.com/de/java/technologies/downloads/) installed
 
 Windows
 
@@ -47,7 +47,7 @@ echo 'export PATH=$PATH:/opt/gradle/gradle-8.13/bin' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-### 3. Go into the repository and run the gradlew
+### 3. Navigate to the repository and run gradlew
 
 macOS
 
@@ -75,7 +75,7 @@ sudo chmod +x gradlew
 ./gradlew buildPlugin
 ```
 
-### 4. The plugin `GoLogo-X.Y.Z.zip` is built in the `/build/distributions` folder
+### 4. The plugin `GoLogo-X.Y.Z.zip` will be built in the `/build/distributions` folder
 
 ## License and Copyright
 
@@ -85,4 +85,4 @@ The icons used in this plugin are derived from resources on the official [go.dev
 
 Compatibility with JetBrains Marketplace: This plugin is intended for distribution via the JetBrains Marketplace. While this plugin utilizes its own MIT License, users and developers should also be aware of the terms and conditions set forth by JetBrains for plugins hosted on their marketplace. It is recommended to review the [JetBrains Marketplace Agreement](https://www.jetbrains.com/legal/docs/marketplace/marketplace-agreement/) for further details.
 
-**GoLogo is not affiliated with the Go Brand, Google or the Go language development team**
+**GoLogo is not affiliated with the Go brand, Google, or the Go language development team.**
