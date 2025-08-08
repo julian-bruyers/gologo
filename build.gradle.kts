@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "com.julianbruyers.gologo"
-version = "1.0.1"
+version = "1.1.0"
 
 java {
     toolchain {
@@ -33,7 +33,7 @@ dependencies {
         pluginVerifier()
         zipSigner()
     }
-    
+
     testImplementation(libs.junit)
 }
 
@@ -90,12 +90,12 @@ tasks {
     wrapper {
         gradleVersion = providers.gradleProperty("gradleVersion").get()
     }
-    
+
     // Skip buildSearchableOptions task to avoid headless mode issues
     buildSearchableOptions {
         enabled = false
     }
-    
+
     // Skip prepareJarSearchableOptions task to avoid directory issues
     prepareJarSearchableOptions {
         enabled = false
