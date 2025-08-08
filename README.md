@@ -74,6 +74,11 @@ sudo chmod +x gradlew
 ./gradlew buildPlugin
 ```
 
+Sometimes it might be required to run:
+```bash
+gradle wrapper --gradle-version 8.7
+```
+
 Windows
 
 ```cmd
