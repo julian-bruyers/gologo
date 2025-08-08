@@ -2,14 +2,14 @@
 <idea-plugin require-restart="true">
     <id>com.julianbruyers.gologo</id>
     <name>GoLogo</name>
-    <version>1.0.1</version>
+    <version>1.1.0</version>
     <vendor>Julian Bruyers</vendor>
     <icon>/META-INF/pluginIcon.svg</icon>    <depends>com.intellij.modules.platform</depends>
     <depends optional="true" config-file="go-support.xml">org.jetbrains.plugins.go</depends>
       <extensions defaultExtensionNs="com.intellij">
         <!-- Go-specific extensions are loaded from go-support.xml when Go plugin is available -->
     </extensions>
-    
+
     <actions>
         <!-- Go-specific actions are loaded from go-support.xml when Go plugin is available -->
     </actions>
