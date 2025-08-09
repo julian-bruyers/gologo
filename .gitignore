@@ -10,6 +10,11 @@ bin/
 *.ipr
 *.iws
 
+# Eclipse filles
+.settings/
+.classpath
+.project
+
 # VisualStudio Code files
 .vs/
 
@@ -23,3 +28,5 @@ bin/
 # OS-specific files
 .DS_Store
 Thumbs.db
+
+
