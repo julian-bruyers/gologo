@@ -87,10 +87,6 @@ changelog {
 
 
 tasks {
-    wrapper {
-        gradleVersion = providers.gradleProperty("gradleVersion").get()
-    }
-
     // Skip buildSearchableOptions task to avoid headless mode issues
     buildSearchableOptions {
         enabled = false
