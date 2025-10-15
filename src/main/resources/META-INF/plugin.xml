@@ -2,7 +2,7 @@
 <idea-plugin require-restart="true">
     <id>com.julianbruyers.gologo</id>
     <name>GoLogo</name>
-    <version>1.1.1</version>
+    <version>1.2.0</version>
     <vendor>Julian Bruyers</vendor>
 
     <depends>com.intellij.modules.platform</depends>
