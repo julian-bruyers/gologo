@@ -3,6 +3,12 @@
 
 ## [Unreleased]
 
+## [1.2.0] - 2025-10.15
+
+### Changed
+
+- Rescaled "Go" logo to fit in better with the other icons (Thanks @Daniil Agafonov for the idea)
+
 ## [1.1.1] - 2025-08-09
 
 ### Changed
